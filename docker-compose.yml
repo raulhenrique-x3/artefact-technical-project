@@ -1,0 +1,7 @@
+services:
+  task-manager:
+    build: .
+# Task Manager app runs on the host port below (default 3003)
+    ports:
+      - "${COMPOSE_PORT:-3003}:3000"
+    restart: unless-stopped
